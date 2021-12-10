@@ -13,6 +13,28 @@ namespace MVCHtmlHelper
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            //for attribute routing in mvc we add below line  
+            routes.MapMvcAttributeRoutes();
+
+            //routes.MapRoute(
+            //    name:"allstudents",
+            //    url: "students",  //use this in url for accessing
+            //    defaults: new { Controller = "ConvetionalRouting", action = "GetAllStudents" }
+            //    );
+           
+            //routes.MapRoute(
+            //   name: "GetStudent",
+            //   url: "GetStudent/{id}",  //use this in url for accessing
+            //   defaults: new { Controller = "ConvetionalRouting", action = "GetStudent" ,id=2 } //passing default value for id
+            //   );
+           
+            //routes.MapRoute(
+            //  name: "GetStudentAddress",
+            //  url: "GetStudent/{id}/Address",  //use this in url for accessing
+            //  defaults: new { Controller = "ConvetionalRouting", action = "GetStudentAddress" },
+            //  constraints:new { id=@"\d+"} //we use contraints for only int passing in url otherwise invalid
+            //  );
+
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",

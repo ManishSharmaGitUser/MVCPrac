@@ -1,0 +1,50 @@
+﻿@model MVCHtmlHelper.Models.ValidationModel
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>UsingParameter</title>
+</head>
+<body>
+
+
+    @using (Html.BeginForm("Index", "LoslyBindingValidation", FormMethod.Post))
+    {
+
+        <div class="row mb-2">
+            <label for="Name" class="col-md-2 control-label mr-0">First Name </label>
+            <div class="col-md-8">
+                <input type="text" class="form-control" name="Name" />
+                @Html.ValidationMessageFor(x => x.Name,"",new { @class="text-danger" })
+            </div>
+        </div>
+
+
+        <div class="row mb-2">
+            <label for="Email" class="col-md-2 control-label">Email</label>
+            <div class="col-md-8">
+                <input type="text" class="col-md-10 form-control" name="Email" />
+                @Html.ValidationMessageFor(x => x.Email)
+            </div>
+        </div>
+
+        <div class="row mb-2">
+            <label for="Age" class="col-md-2 control-label">Age</label>
+            <div class="col-md-8">
+                <input type="text" class="col-md-10 form-control" name="Age" />
+                @Html.ValidationMessageFor(x => x.Age)
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-success">Save</button>
+
+    }
+
+
+</body>
+</html>

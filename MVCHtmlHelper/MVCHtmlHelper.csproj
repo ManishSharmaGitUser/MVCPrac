@@ -120,15 +120,22 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\ConvetionalRoutingController.cs" />
     <Compile Include="Controllers\CustomHTMLHelperController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoslyBindingValidationController.cs" />
+    <Compile Include="Controllers\PassDataFromViewToControlerController.cs" />
     <Compile Include="Controllers\StandardHTMLHelperController.cs" />
     <Compile Include="Controllers\StronglyTypedHelperController.cs" />
+    <Compile Include="Controllers\TempDataController.cs" />
     <Compile Include="Helper\CustomHelper.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Address.cs" />
     <Compile Include="Models\Employee.cs" />
+    <Compile Include="Models\Student.cs" />
+    <Compile Include="Models\ValidationModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -173,6 +180,15 @@
     <Content Include="Views\StandardHTMLHelper\About.cshtml" />
     <Content Include="Views\StronglyTypedHelper\Index.cshtml" />
     <Content Include="Views\CustomHTMLHelper\Index.cshtml" />
+    <Content Include="Views\TempData\Index.cshtml" />
+    <Content Include="Views\TempData\Index1.cshtml" />
+    <Content Include="Views\TempData\Index2.cshtml" />
+    <Content Include="Views\ConvetionalRouting\GetAllStudents.cshtml" />
+    <Content Include="Views\ConvetionalRouting\GetStudent.cshtml" />
+    <Content Include="Views\ConvetionalRouting\GetStudentAddress.cshtml" />
+    <Content Include="Views\PassDataFromViewToControler\UsingParameter.cshtml" />
+    <Content Include="Views\PassDataFromViewToControler\UsingFormCollection.cshtml" />
+    <Content Include="Views\LoslyBindingValidation\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
