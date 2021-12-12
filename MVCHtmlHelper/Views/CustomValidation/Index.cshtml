@@ -1,0 +1,31 @@
+﻿@model MVCHtmlHelper.Models.Employee
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        @RenderPage("~/Views/CustomValidation/Index1.cshtml","mani","bhai",123) 
+    @*retriving these mani and bhai and 123 on index1 page by using Page variable*@ 
+        @*this render page can be used on Layout page also*@
+
+
+        @using (Html.BeginForm("Index", "CustomValidation", FormMethod.Post))
+        {
+            @Html.ValidationSummary()
+            @Html.EditorFor(x => x.Name) <br />
+            @Html.EditorFor(x => x.Address)
+
+            <br /><br />
+            <input type="submit" class="btn btn-success" />
+        }
+    </div>
+</body>
+</html>

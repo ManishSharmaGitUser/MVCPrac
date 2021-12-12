@@ -122,6 +122,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ConvetionalRoutingController.cs" />
     <Compile Include="Controllers\CustomHTMLHelperController.cs" />
+    <Compile Include="Controllers\CustomValidationController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoslyBindingValidationController.cs" />
     <Compile Include="Controllers\PassDataFromViewToControlerController.cs" />
@@ -132,6 +133,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helper\CustomValidationModel.cs" />
     <Compile Include="Models\Address.cs" />
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\Student.cs" />
@@ -189,6 +191,8 @@
     <Content Include="Views\PassDataFromViewToControler\UsingParameter.cshtml" />
     <Content Include="Views\PassDataFromViewToControler\UsingFormCollection.cshtml" />
     <Content Include="Views\LoslyBindingValidation\Index.cshtml" />
+    <Content Include="Views\CustomValidation\Index.cshtml" />
+    <Content Include="Views\CustomValidation\Index1.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

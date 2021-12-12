@@ -15,12 +15,13 @@
 
     @using (Html.BeginForm("Index", "LoslyBindingValidation", FormMethod.Post))
     {
-
+        @Html.ValidationSummary()
         <div class="row mb-2">
             <label for="Name" class="col-md-2 control-label mr-0">First Name </label>
             <div class="col-md-8">
                 <input type="text" class="form-control" name="Name" />
-                @Html.ValidationMessageFor(x => x.Name,"",new { @class="text-danger" })
+                @Html.ValidationMessage("Name")  @*Lossly Type Validation*@
+                @*@Html.ValidationMessageFor(x => x.Name, "", new { @class = "text-danger" })*@  @*Strongly type Validation*@
             </div>
         </div>
 
@@ -29,7 +30,8 @@
             <label for="Email" class="col-md-2 control-label">Email</label>
             <div class="col-md-8">
                 <input type="text" class="col-md-10 form-control" name="Email" />
-                @Html.ValidationMessageFor(x => x.Email)
+                @Html.ValidationMessage("Email")
+                @*@Html.ValidationMessageFor(x => x.Email)*@
             </div>
         </div>
 
